@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-MAINTAINER calvintam236 <calvintam236@users.noreply.github.com>
+LABEL maintainer="calvintam236"
 LABEL description="Monero-Wallet-RPC in Docker."
 
 WORKDIR /tmp
