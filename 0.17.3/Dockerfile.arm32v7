@@ -6,15 +6,15 @@ LABEL description="Monero-Wallet-RPC in Docker."
 WORKDIR /tmp/
 
 ADD \
-https://downloads.getmonero.org/cli/monero-linux-armv7-v0.17.3.0.tar.bz2 \
+https://downloads.getmonero.org/cli/monero-linux-armv7-v0.17.3.2.tar.bz2 \
 .
 
 RUN \
 apt-get update \
 && apt-get -y --no-install-recommends install bzip2 \
 && rm -rf /var/lib/apt/lists/* \
-&& tar -jxvf monero-linux-armv7-v0.17.3.0.tar.bz2 \
-&& mv monero-armv7-linux-gnu-v0.17.3.0/monero-wallet-rpc /usr/local/bin/ \
+&& tar -jxvf monero-linux-armv7-v0.17.3.2.tar.bz2 \
+&& mv monero-armv7-linux-gnu-v0.17.3.2/monero-wallet-rpc /usr/local/bin/ \
 && chmod +x /usr/local/bin/monero-wallet-rpc \
 && rm -r *
 
